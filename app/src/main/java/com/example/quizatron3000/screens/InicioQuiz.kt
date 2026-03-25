@@ -18,6 +18,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
@@ -50,8 +51,7 @@ fun InicioQuiz(modifier: Modifier = Modifier) {
         Button(
             modifier = Modifier
                 .fillMaxWidth()
-                .border(width = 1.dp, Color.Black, RoundedCornerShape(20.dp)),
-            shape = RoundedCornerShape(20.dp),
+                .border(width = 1.dp, Color.Black, RoundedCornerShape(20)),
             colors = ButtonDefaults.buttonColors(
                 containerColor = colorResource(R.color.yellow),
                 contentColor = colorResource((R.color.black)),
