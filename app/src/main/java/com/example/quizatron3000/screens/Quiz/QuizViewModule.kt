@@ -15,12 +15,16 @@ class QuizViewModule: ViewModel() {
         _paginaQuiz.value = paginaQuiz.value?.plus(1)
         return _paginaQuiz
     }
-    fun atualizarPagina(novaPagina: Int): MutableLiveData<Int> {
-        _paginaQuiz.value = novaPagina
-        return _paginaQuiz
+    fun adicionarRespostaCorreta(): LiveData<Int>{
+        _respostasCorretas.value = respostasCorretas.value?.plus(1)
+        return _respostasCorretas
     }
-
-    fun somarRespostaCorreta(){
-        _respostasCorretas.value = _respostasCorretas.value?.plus(1)
+    fun reiniciarRespostas(): LiveData<Int>{
+        _respostasCorretas.value = 0
+        return _respostasCorretas
+    }
+    fun reiniciarPaginas(): LiveData<Int>{
+        _paginaQuiz.value = 1
+        return _paginaQuiz
     }
 }

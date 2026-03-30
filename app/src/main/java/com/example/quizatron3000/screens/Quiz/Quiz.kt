@@ -12,12 +12,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.quizatron3000.R
 import com.example.quizatron3000.composebles.CriarQuiz
 
 
 @Composable
-fun TelaQuiz(modifier: Modifier = Modifier) {
+fun TelaQuiz(modifier: Modifier = Modifier, navController: NavController) {
     Column(
         modifier = modifier
             .fillMaxSize()
@@ -31,6 +32,6 @@ fun TelaQuiz(modifier: Modifier = Modifier) {
             painter = painterResource(R.drawable.quiz),
             contentDescription = "",
         )
-        CriarQuiz(modifier = Modifier, quizViewModule = QuizViewModule())
+        CriarQuiz(modifier = Modifier, QuizViewModule(), navController)
     }
 }
